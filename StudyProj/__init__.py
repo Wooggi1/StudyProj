@@ -1,0 +1,1 @@
+home='D:\python\django'
