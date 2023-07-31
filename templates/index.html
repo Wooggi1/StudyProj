@@ -77,18 +77,19 @@ https://www.tooplate.com/view/2124-vertex
                 <div class="tm-media">
                     <img src="{% static feature.image_path %}" alt="Intro image">
                     <div class="tm-media-body">
+                        {% if feature.name == 'Ronaldo brilha mto no curintia' %}
+                        <h2><a href="https://www.youtube.com/watch?v=z3OKd5b2Rlw" target="_blank" class="tm-text-primary">{{feature.name}}</a></h2>
+                        <p class="tm-mb-20 tm-text-small">
+                            {{feature.details}}
+                        </p>
+                        {% else %}
                         <h2><a href="#" class="tm-text-primary">{{feature.name}}</a></h2>
                         <p class="tm-mb-20 tm-text-small">
                             {{feature.details}}
                         </p>
-                        {% if feature.is_legal == True %}
-                        <p class="tm-mb-20 tm-text-small">
-                        Isso eh legal sorriso ronaldo
-                        </p>
-                        {% else %}
-                        <p class="tm-mb-20 tm-text-small">
-                            Isso nn eh legal sorriso ronaldo
-                        </p>
+                        {% endif %}
+                        {% if feature.name == 'Sorriso Ronaldo isso num eh legal' %}
+                        <a href="https://www.youtube.com/watch?v=fwCWg-L_TNE" target="_blank">eh o sorriso ronaldo</a>
                         {% endif %}
                         <span class="tm-text-secondary tm-media-span tm-text-small">
                             Friday . 25 June 2021
@@ -98,32 +99,6 @@ https://www.tooplate.com/view/2124-vertex
                 </div>
                 {% endfor %}
     
-                <!--<div class="tm-media">
-                    <img src="{% static 'img/gallery/tn/img-12.jpg' %%}" alt="Intro image">
-                    <div class="tm-media-body">
-                        <h2><a href="#" class="tm-text-primary">{{feature2.name}}</a></h2>
-                        <p class="tm-mb-20 tm-text-small">
-                            {{feature2.details}} <a rel="nofollow" href="https://www.tooplate.com/contact" target="_parent">contact us</a> for more info. </p>
-                        <span class="tm-text-secondary tm-media-span tm-text-small">
-                            Monday . 21 June 2021
-                    </span>
-                        <hr class="tm-hr tm-mr">
-                    </div>
-                </div>
-                
-                <div class="tm-media">
-                    <img src="{% static 'img/gallery/tn/img-18.jpg' %}" alt="Intro image">
-                    <div class="tm-media-body">
-                        <h2><a href="#" class="tm-text-primary">{{feature3.name}}</a></h2>
-                        <p class="tm-mb-20 tm-text-small">
-                            {{feature3.details}}
-                        </p>
-                        <span class="tm-text-secondary tm-media-span tm-text-small">
-                            Wednesday . 16 June 2021
-                        </span>
-                        <hr class="tm-hr tm-mr">
-                    </div>
-                </div>-->
                 <div class="tm-text-right">
                     <a href="#services" class="tm-btn tm-btn-next">Next page</a>
                 </div>   
