@@ -60,19 +60,32 @@ https://www.tooplate.com/view/2124-vertex
                     About
                 </a>
             </li>
+            {% if user.is_authenticated %}
             <li class="nav-item">
-                <a href="#contact" class="nav-link">
-                    Contact
+                <a href="#" class="nav-link">
+                    Logout
                 </a>
             </li>
+            {% else %}
+            <li class="nav-item">
+                <a href="{% url 'login' %}" class="nav-link">
+                    Login or Signup
+                </a>
+            </li>
+            {% endif %}
         </ul>
     </nav>
+
+    
 
     <!-- Content -->
     <main>
         <div id="intro" class="tm-section">
             <!-- Intro left -->
             <div class="tm-section-col tm-content">
+                {% if user.is_authenticated %}
+                <h2>Welcome, {{user.username}}</h2>
+                {% endif%}
                 {% for feature in features %}
                 <div class="tm-media">
                     <img src="{% static feature.image_path %}" alt="Intro image">
