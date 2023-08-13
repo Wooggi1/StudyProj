@@ -566,7 +566,6 @@ figure.effect-goliath:hover p {
         padding-bottom: 15px;        
         width: 280px;
         transition: all 0.5s ease;
-        z-index: 99999;
     }
 
     .tm-nav ul.show { left: 0; }
